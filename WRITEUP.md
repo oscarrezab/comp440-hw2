@@ -15,7 +15,7 @@ Because that adds a layer of friction, since it requires changing environments a
 
 ### Step D: How the MCP server connects Claude Code to Colab
 
-XXXX
+There must be some setup file that defines which port on my computer to connect to, where Claude is located, and what to look for in Colab.
 
 ## Part 1: The tools and the tests
 
