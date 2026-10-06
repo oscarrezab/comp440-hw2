@@ -1,17 +1,17 @@
 # COMP 440 HW2: Whose Preferences Count?
 
-**Name:** XXXX
-**Date:** XXXX
+**Name:** Oscar Reza Bautista
+**Date:** October 6, 2026
 
 ## Part 0: Set up
 
 ### Step B: What an MCP server is and why it's useful
 
-XXXX
+An MCP server connects our AI agents to sources such as databases, APIs, or code. It is useful because it gives our coding assistants tools, so they can access resources that help us in development. An example would be connecting the MCP host to a news database so it can have access to news relevant to our project.
 
 ### Step B: Why not paste code into Colab yourself
 
-XXXX
+Because that adds a layer of friction, since it requires changing environments and switching contexts.
 
 ### Step D: How the MCP server connects Claude Code to Colab
 
