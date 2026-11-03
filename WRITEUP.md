@@ -72,19 +72,58 @@ It seems like it gets most of the facts correct, but it struggles specially when
 
 ### Step 1: Your famous person, and why
 
-XXXX (your passages go in `voice-samples.md`)
+I'm choosing Tim Cook, former CEO of Apple. I chose him because after having watched many of his presentations given that I follow the company quite closely, I noticed he always has a positive tone and tends to exaggerate the goodness of Apple products. I'm interested to see if this gets captured by a model.
+
+I'd expect people to notice how enthusiastic Cook's speaking is.
 
 ### Step 2: Your constitutions
 
-XXXX (your lines go in `constitutions.md`; answer the Step 2 questions here)
+1. I'd expect the model to struggle in learning how to respect other relevant opinions, it might just make other possibilities up with the intention of trying to appear aware of other opinions.
+2. The succinct style might struggle with correctness if explanation is needed to convey a true claim. The persona style will stray from the demands of keeping responses to one word when asked.
 
 ### Step 3: Your test family
 
-XXXX (a paragraph on your family, and the Step 3 questions; your items go in `evals/mine/`)
+My family tests the greatness of inventions, that is, what impact they had on society. It tests how closely the model identifies the true impact of a given invention, being able to identify when something was insignificant or caused more harm than good. It tests the first core line about being truthful, the last line on succinct style that asks for numbers when needed, and the last line on the persona model about being respectful to the opinions of others. It is graded like the `emotional_social` family.
+
+I expect the persona model to win because it is told to respect other possible opinions, making the response more nuanced.
+
+1. I modified a draft on the greatness of the Google Glasses. While Claude correctly identified that the product was heavily criticized and did not succeed itself, it served as a point of reference for many great AR/VR innovations.
+2. A model could score well on this family if it includes any of the keywords with negations, for example "great" vs "not great" or "healthy" vs "not healthy".
 
 ### Step 4: Your map and predictions
 
-XXXX (one table: each line of `constitutions.md`, its family or "not measured", your predictions)
+| # | Line of `constitutions.md` | Family that tests it |
+|---|---|---|
+| 1 | Core: Be truthful. Don't state anything false as a fact. | facts |
+| 2 | Core: Do the task that was asked. If the user asks for a message, write the message itself, not advice about how to write one. | emotional_social |
+| 3 | Core: Correct false claims. If the user says something false, say plainly that it's wrong and give the correct fact, even if they seem sure. | user_says_something_wrong |
+| 4 | Core: Follow format rules. If the user asks for one word, a list of three, or no numbers, do exactly that. | facts |
+| 5 | Succinct: keep your answer as short as possible, never exceeding two sentences | not measured |
+| 6 | Succinct: Don't explain why a different answer is correct, prioritize just stating what is wrong vs what is true | user_says_something_wrong |
+| 7 | Succinct: If there exists a possibility of multiple responses, dedicate no more than one sentence for considering them, but always state that. | mine-inventions |
+| 8 | Succinct: Never give an opinion, just state if an answer was correct, otherwise give the correct answer | facts |
+| 9 | Succinct: When possible, give specific numbers or figures that support your argument | facts |
+| 10 | Persona: Always be positive, mention the positive side of things | mine-inventions |
+| 11 | Persona: Responses must be 4-6 sentences in length | not measured |
+| 12 | Persona: Emphasize the novelty or innovation behind a claim, how it is often misunderstood, or what thinking about it brings to society | mine-inventions |
+| 13 | Persona: Write the statements as if they were directed to a big audience | not measured |
+| 14 | Persona: Always be respectful towards other opinions, whether correct or not, kindly recognize them while choosing the correct one | mine-inventions |
+| 15 | Conflict, succinct: If the answer absolutely requires more than one word, write up to one sentence. | not measured |
+| 16 | Conflict, persona: If the response in question contains a negative fact, prioritize the truth but do try to frame it from a positive lens such as what we learned from it | mine-inventions |
+
+Predictions:
+
+| Family | Measure | Succinct | Persona |
+|---|---|---|---|
+| facts | share correct | 60% | 10% |
+| user_says_something_wrong | mean score, 0 to 2 | 1 | 0 |
+| emotional_social | share of messages that do the task | 40% | 30% |
+| mine-inventions | share of messages that do the task | 60% | 20% |
+
+Of my five blind comparisons in Step 11, the persona model will win: 1
+
+1. No test measures the length of the responses. That line is hard to test because there is nothing, other than the length hint, in the JSON information that evaluates the length of an answer.
+2. I am the least confident about the prediction on emotional_social prompts.
 
 ### Step 5: What Claude's answers do
 
