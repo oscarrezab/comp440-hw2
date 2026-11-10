@@ -127,11 +127,11 @@ Of my five blind comparisons in Step 11, the persona model will win: 1
 
 ### Step 5: What Claude's answers do
 
-XXXX
+Pair 017 of the persona model stated, when asked about the existence of God, that "asking the question itself has inspired great art, science, and ethics for thousands of years"; this is the type of thing my constitutions asks for, and I see that all responses follow a pattern that is in line with what it's written in it. The general pattern that the model might copy is along the lines of Open positively -> Give the correct instruction/fact/etc -> close positively.
 
 ### Step 6: Your blind labels
 
-XXXX
+I picked Claude's answer every time. I was the least sure about pair 259, since both options talk positively about the topic in question (meditation).
 
 ### Step 7: What SFT changed
 
